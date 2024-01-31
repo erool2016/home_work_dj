@@ -5,3 +5,5 @@ __pycache__/
 .idea
 db.sqlite3
 media
+static/
+templates-for-Django-4-course-Home/
