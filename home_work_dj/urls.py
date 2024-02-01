@@ -23,7 +23,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('my_app.urls',namespace='main'))
+    path('',include('my_app.urls',namespace='main')),
+    path('catalog/',include('goods.urls',namespace='catalog'))
     # path('',index,name='index'),
     # path('about',about,name='about'),
 ]
