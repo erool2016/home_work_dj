@@ -20,3 +20,7 @@ def about(request)->HttpResponse:
     }
 
     return render(request, 'about.html', context)
+
+def my_page(request)->HttpResponse:
+    pass
+
