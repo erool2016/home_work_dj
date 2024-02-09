@@ -19,12 +19,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from home_work_dj.settings import DEBUG
 # from my_app.views import index, about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('my_app.urls',namespace='main')),
-    path('catalog/',include('goods.urls',namespace='catalog'))
+    path('catalog/',include('goods.urls',namespace='catalog')),
+    # path("__debug__/", include("debug_toolbar.urls")),
     # path('',index,name='index'),
     # path('about',about,name='about'),
 ]
+if DEBUG:
+    urlpatterns += [path("__debug__/", include("debug_toolbar.urls")),]
