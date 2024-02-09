@@ -25,7 +25,7 @@ def catalog(request):
          {'image': 'deps/images/goods/kitchen table.jpg',
          'name': 'Кухонный стол с раковиной',
          'description': 'Кухонный стол для обеда с встроенной раковиной и стульями.',
-         'price': 365.00},
+         'price': 356.00},
 
          {'image': 'deps/images/goods/kitchen table 2.jpg',
          'name': 'Кухонный стол с встройкой',
