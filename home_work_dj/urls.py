@@ -20,6 +20,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from home_work_dj.settings import DEBUG
+from django.conf import settings
+from django.conf.urls.static import static
 # from my_app.views import index, about
 
 urlpatterns = [
@@ -31,4 +33,5 @@ urlpatterns = [
     # path('about',about,name='about'),
 ]
 if DEBUG:
-    urlpatterns += [path("__debug__/", include("debug_toolbar.urls")),]
+    urlpatterns += ([path("__debug__/", include("debug_toolbar.urls")),])
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
